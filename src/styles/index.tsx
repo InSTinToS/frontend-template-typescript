@@ -7,10 +7,9 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
   }
-
+  
   html {
     font-size: 62.5%;
-
 
     body {
       font-size: 1.6rem;
@@ -30,8 +29,6 @@ export default createGlobalStyle`
     border: none;
     cursor: pointer;
   }
-
-
 
   input[type="checkbox"] {
     &, &:focus, &:hover {

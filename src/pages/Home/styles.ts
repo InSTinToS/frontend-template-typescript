@@ -1,3 +1,7 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``
+const Style = styled.main``
+
+export default Style
+
+Style.displayName = 'Home-Style'

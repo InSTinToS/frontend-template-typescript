@@ -4,8 +4,8 @@
     "es6": true
   },
   "extends": [
-    "plugin:react/recommended",
     "airbnb",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
@@ -14,7 +14,6 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -22,41 +21,52 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "prettier",
-    "import",
-    "jsx-a11y"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "import", "jsx-a11y"],
   "settings": {
     "import/resolver": {
       "typescript": {}
     }
   },
+  "parser": "@typescript-eslint/parser",
   "rules": {
-    "camelcase": "off",
-    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+
+    "no-nested-ternary": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/no-useless-path-segments": "off",
+    "import/order": "off",
+    "no-empty-function": "off",
+    "no-use-before-define":"off", 
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "react/no-children-prop": "off",
+    "no-unused-expressions": "off",
+    "no-param-reassign": "off",
     "import/prefer-default-export": "off",
     "jsx-a11y/label-has-associated-control": "off",
-    "no-unused-expressions": "off",
-    "import/order": "off",
-    "import/no-unresolved": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "react/jsx-wrap-multilines": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".tsx"
-        ]
+        "extensions": [".tsx"]
       }
     ],
     "import/extensions": [
