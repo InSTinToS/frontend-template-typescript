@@ -5,4 +5,8 @@ export { light, dark }
 
 export interface ThemeAttributes {
   name: string
+
+  colors: {
+    primary: string
+  }
 }
