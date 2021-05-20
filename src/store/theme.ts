@@ -12,8 +12,8 @@ const Theme = createSlice({
     changeTheme: state => {
       localStorage.setItem('theme', state.name === 'light' ? 'dark' : 'light')
       return state.name === 'light' ? dark : light
-    },
-  },
+    }
+  }
 })
 
 export type ThemeState = ThemeAttributes

@@ -5,19 +5,23 @@ interface Data {
 }
 
 const request = axios.create({
-  baseURL: 'ulr-of-api',
+  baseURL: 'ulr-of-api'
 })
 
 const api = {
-  post: async (path: string, sendData?: Data, config?: AxiosRequestConfig): Promise<any> => {
+  post: async (
+    path: string,
+    sendData?: Data,
+    config?: AxiosRequestConfig
+  ): Promise<any> => {
     const token = localStorage.getItem('token-in-local')
 
     const axiosConfig = token
       ? {
           headers: {
-            authorization: `Bearer ${token}`,
+            authorization: `Bearer ${token}`
           },
-          ...config,
+          ...config
         }
       : config
 
@@ -35,9 +39,9 @@ const api = {
     const axiosConfig = token
       ? {
           headers: {
-            authorization: `Bearer ${token}`,
+            authorization: `Bearer ${token}`
           },
-          ...config,
+          ...config
         }
       : config
 
@@ -47,7 +51,7 @@ const api = {
     } catch (error) {
       return error.response.data
     }
-  },
+  }
 }
 
 export default api

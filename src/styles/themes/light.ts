@@ -4,8 +4,8 @@ const light: ThemeAttributes = {
   name: 'light',
 
   colors: {
-    primary: '#f0f',
-  },
+    primary: '#f0f'
+  }
 }
 
 export default light

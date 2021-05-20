@@ -1,33 +1,48 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "sourceType": "module",
-        "ecmaVersion": 12,
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "standard",
-        "prettier",
-        "prettier/react",
-        "plugin:react-hooks/recommended"
-    ],
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "prettier"
-    ],
-    "rules": {
-        "no-unused-vars": "warn",
-        "prettier/prettier": "error",
-        "no-use-before-define": "off",
-        "react/prop-types": "off",
-        "no-undef": "off"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 12,
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react",
+    "standard",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "prettier/prettier": "error",
+    "no-use-before-define": "off",
+    "react/prop-types": "off",
+    "no-undef": "off",
+    "multiline-ternary": "off",
+    "indent": "off",
+    "curly": [2, "multi"],
+    "react/display-name": "off",
+    "camelcase": "off"
+  }
 }

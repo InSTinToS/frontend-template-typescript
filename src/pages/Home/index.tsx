@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from './styles'
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <Style>
       <h1>Home</h1>
